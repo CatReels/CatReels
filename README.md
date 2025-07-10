@@ -53,4 +53,7 @@ With **CatReels**, you decide how to enjoy:
 Download **CatReels** today.  
 Start your journey into a world of short films — right from your pocket.
 
-📌 Download app apk for ANDROID: [App apk](https://github.com/CatReels/CatReels/releases/download/V1.0.1/catreels.apk)
+<a href="https://github.com/CatReels/CatReels/releases/download/V1.0.1/catreels.apk">
+  <img src="images/logo_download.png" alt="Download" width="300"/>
+</a>
+
