@@ -1,3 +1,7 @@
+<p align="left">
+  <img src="images/Banner.png" alt="banner">
+</p>
+
 ## 🎬 CatReels – Explore the Universe of Ultra-Short Films, Unlimited Fun
 
 Looking to make the most of short breaks in your busy day?  
@@ -16,6 +20,11 @@ Personalized recommendations help you jump right into what you love.
 Watch anytime, anywhere, with smooth FullHD streaming.
 
 ---
+<p align="left">
+  <img src="images/explore.png" alt="Explore" width="300"/>
+  <img src="images/view_screen.png" alt="Vieew Screen" width="300"/>
+  <img src="images/list_movie.png" alt="List Movie" width="300"/>
+</p>
 
 ### ✨ Key Features of CatReels:
 
@@ -54,6 +63,8 @@ Download **CatReels** today.
 Start your journey into a world of short films — right from your pocket.
 
 <a href="https://github.com/CatReels/CatReels/releases/download/V1.0.1/catreels.apk">
-  <img src="images/logo_download.png" alt="Download" width="300"/>
+  <img src="images/logo_download.png" alt="Download" width="150"/>
 </a>
+
+
 
