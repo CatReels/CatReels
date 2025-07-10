@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CatReels</title>
   <style>
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
     body {
       background-color: #111;
       color: #f0f0f0;
@@ -14,6 +20,8 @@
     }
     img {
       border-radius: 8px;
+      max-width: 100%;
+      height: auto;
     }
     h2, h3 {
       color: #ffc107;
@@ -22,9 +30,32 @@
       border: 1px solid #444;
       margin: 40px 0;
     }
-    .image-row img {
-      margin-right: 12px;
-      margin-bottom: 10px;
+    .image-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .image-row.three img {
+      flex: 1 1 calc(33.33% - 12px);
+      max-width: calc(33.33% - 12px);
+    }
+    .image-row.five img {
+      flex: 1 1 calc(20% - 12px);
+      max-width: calc(20% - 12px);
+    }
+    @media (max-width: 1199px) {
+      .image-row.five img {
+        flex: 1 1 48%;
+        max-width: 48%;
+      }
+    }
+    @media (max-width: 768px) {
+      .image-row img {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
     }
     .download-btn img {
       margin-top: 20px;
@@ -33,6 +64,7 @@
   </style>
 </head>
 <body>
+  <div class="container">
 
   <p align="left">
     <img src="images/Banner.png" alt="banner" width="100%">
@@ -57,10 +89,10 @@
 
   <hr>
 
-  <div class="image-row">
-    <img src="images/explore.png" alt="Explore" width="300" />
-    <img src="images/view_screen.png" alt="View Screen" width="300" />
-    <img src="images/list_movie.png" alt="List Movie" width="300" />
+  <div class="image-row three">
+    <img src="images/explore.png" alt="Explore" />
+    <img src="images/view_screen.png" alt="View Screen" />
+    <img src="images/list_movie.png" alt="List Movie" />
   </div>
 
   <h3>✨ Key Features of CatReels:</h3>
@@ -83,12 +115,12 @@
     <li>Enjoy recommendations tailored just for you</li>
   </ul>
 
-  <div class="image-row">
-    <img src="images/home.jpg" alt="Entertainment moments" width="160" />
-    <img src="images/list_collection.jpg" alt="Diverse film library" width="160" />
-    <img src="images/for_you.jpg" alt="Personalized experience" width="160" />
-    <img src="images/my_list.jpg" alt="My List" width="160" />
-    <img src="images/player.jpg" alt="Player Screen" width="160" />
+  <div class="image-row five">
+    <img src="images/home.jpg" alt="Entertainment moments" />
+    <img src="images/list_collection.jpg" alt="Diverse film library" />
+    <img src="images/for_you.jpg" alt="Personalized experience" />
+    <img src="images/my_list.jpg" alt="My List" />
+    <img src="images/player.jpg" alt="Player Screen" />
   </div>
 
   <hr>
@@ -102,6 +134,7 @@
     <a href="https://github.com/CatReels/CatReels/releases/download/V1.0.1/catreels.apk">
       <img src="images/logo_download.png" alt="Download" width="150" />
     </a>
+  </div>
   </div>
 
 </body>
