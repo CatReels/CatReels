@@ -12,6 +12,7 @@
       max-width: 960px;
       margin: 0 auto;
       padding: 0 20px;
+      box-sizing: border-box;
     }
 
     body {
@@ -32,6 +33,11 @@
       color: #d8267b;
       text-align: center;
       font-size: 25px;
+    }
+
+    h4 {
+      color: #ffcc00;
+      margin: 0 0 5px;
     }
 
     hr {
@@ -67,6 +73,30 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
+
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .feature-box {
+      flex: 1 1 calc(50% - 20px);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .feature-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .feature-box {
+        flex: 1 1 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -78,121 +108,128 @@
       </a>
     </div>
   </div>
+
   <div class="container">
 
-  <p align="left">
-    <img src="images/Banner.png" alt="banner" width="100%">
-  </p>
+    <p align="left">
+      <img src="images/Banner.png" alt="banner" width="100%">
+    </p>
 
-  <h2>🎮 CatReels – Explore the Universe of Ultra-Short Films, Unlimited Fun</h2>
+    <h2>🎮 CatReels – Explore the Universe of Ultra-Short Films, Unlimited Fun</h2>
 
-  <p>Looking to make the most of short breaks in your busy day?<br>
-  Welcome to <strong>CatReels</strong> – your go-to app for mini entertainment moments.</p>
+    <p>Looking to make the most of short breaks in your busy day?<br>
+    Welcome to <strong>CatReels</strong> – your go-to app for mini entertainment moments.</p>
 
-  <p>Each episode lasts only a few minutes.<br>
-  Yet, every story delivers impact — romantic sparks, revenge twists, or unexpected turns.</p>
+    <p>Each episode lasts only a few minutes.<br>
+    Yet, every story delivers impact — romantic sparks, revenge twists, or unexpected turns.</p>
 
-  <p><strong>CatReels</strong> keeps things fresh.<br>
-  New short films are added regularly across many themes.</p>
+    <p><strong>CatReels</strong> keeps things fresh.<br>
+    New short films are added regularly across many themes.</p>
 
-  <p>You’ll find viral hits, trending dramas, and global stories.<br>
-  All in one easy-to-use app.</p>
+    <p>You’ll find viral hits, trending dramas, and global stories.<br>
+    All in one easy-to-use app.</p>
 
-  <p>Personalized recommendations help you jump right into what you love.<br>
-  Watch anytime, anywhere, with smooth FullHD streaming.</p>
+    <p>Personalized recommendations help you jump right into what you love.<br>
+    Watch anytime, anywhere, with smooth FullHD streaming.</p>
 
-  <hr>
+    <hr>
 
-  <div class="screenshot-wrap" style="margin-bottom: 40px;">
-  <div class="owl-carousel owl-theme" id="feature-carousel">
-    <div class="item"><img src="images/explore.png" alt="Explore" /></div>
-    <div class="item"><img src="images/view_screen.png" alt="View Screen" /></div>
-    <div class="item"><img src="images/list_movie.png" alt="List Movie" /></div>
-  </div>
-</div>
+    <div class="screenshot-wrap" style="margin-bottom: 40px;">
+      <div class="owl-carousel owl-theme" id="feature-carousel">
+        <div class="item"><img src="images/explore.png" alt="Explore" /></div>
+        <div class="item"><img src="images/view_screen.png" alt="View Screen" /></div>
+        <div class="item"><img src="images/list_movie.png" alt="List Movie" /></div>
+      </div>
+    </div>
 
-  <h3>✨ Key Features</h3>
-  <ul>
-    <li><strong>Diverse film library</strong>: Comedy, romance, thriller, fantasy, and more.<br>
-      Exclusive content from Vietnam and around the world.</li>
-    <li><strong>Personalized experience</strong> – enjoy recommendations tailored just for you</li>
-    <li><strong>Entertainment anytime, anywhere</strong> – enjoy short films on the go, wherever you are</li>
-    <li><strong>My List support</strong> – easily continue watching from your personalized list</li>
-    <li><strong>Immersive viewing screen</strong> – designed for a focused and enjoyable watching experience</li>
-  </ul>
-
-  <hr>
-
-  <h3>💡 How CatReels Works</h3>
-  <p>With <strong>CatReels</strong>, you decide how to enjoy:</p>
-  <ul>
-    <li>Watch for free</li>
-    <li>Easily continue watching from your personalized list</li>
-    <li>Enjoy recommendations tailored just for you</li>
-  </ul>
-
-  <hr>
-
-  <div id="screenshot" class="section section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3 col-xs-12">
-          <div class="section-header text-center">
-            <h3 class="section-title">📸 Screenshot</h3>
-            <p class="section-sub">A quick look at the app &amp; its features</p>
-          </div>
+    <h3>✨ Key Features</h3>
+    <div class="feature-grid">
+      <div class="feature-box">
+        <div class="feature-icon">🎬</div>
+        <div>
+          <h4>Diverse film library</h4>
+          <p>Comedy, romance, thriller, fantasy, and more.<br>Exclusive content from Vietnam and around the world.</p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="screen-mock"></div>
-          <div class="screenshot-wrap">
-            <div class="owl-carousel screenshot-carousel owl-theme" id="screenshot-carousel">
-              <div class="item"><img src="images/home.jpg" alt="Entertainment moments"></div>
-              <div class="item"><img src="images/list_collection.jpg" alt="Diverse film library"></div>
-              <div class="item"><img src="images/for_you.jpg" alt="Personalized experience"></div>
-              <div class="item"><img src="images/my_list.jpg" alt="My List"></div>
-              <div class="item"><img src="images/player.jpg" alt="Player Screen"></div>
+      <div class="feature-box">
+        <div class="feature-icon">👤</div>
+        <div>
+          <h4>Personalized experience</h4>
+          <p>Enjoy recommendations tailored just for you</p>
+        </div>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">📱</div>
+        <div>
+          <h4>Entertainment anytime, anywhere</h4>
+          <p>Enjoy short films on the go, wherever you are</p>
+        </div>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">🎥</div>
+        <div>
+          <h4>My List support</h4>
+          <p>Easily continue watching from your personalized list</p>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h3>💡 How CatReels Works</h3>
+    <p>With <strong>CatReels</strong>, you decide how to enjoy:</p>
+    <ul>
+      <li>Watch for free</li>
+      <li>Easily continue watching from your personalized list</li>
+      <li>Enjoy recommendations tailored just for you</li>
+    </ul>
+
+    <hr>
+
+    <div id="screenshot" class="section section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 col-xs-12">
+            <div class="section-header text-center">
+              <h3 class="section-title">📸 Screenshot</h3>
+              <p class="section-sub">A quick look at the app &amp; its features</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="screen-mock"></div>
+            <div class="screenshot-wrap">
+              <div class="owl-carousel screenshot-carousel owl-theme" id="screenshot-carousel">
+                <div class="item"><img src="images/home.jpg" alt="Entertainment moments"></div>
+                <div class="item"><img src="images/list_collection.jpg" alt="Diverse film library"></div>
+                <div class="item"><img src="images/for_you.jpg" alt="Personalized experience"></div>
+                <div class="item"><img src="images/my_list.jpg" alt="My List"></div>
+                <div class="item"><img src="images/player.jpg" alt="Player Screen"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <hr>
+    <hr>
 
-  <p>
-    Download <strong>CatReels</strong> today.<br>
-    Start your journey into a world of short films — right from your pocket.
-  </p>
+    <p>
+      Download <strong>CatReels</strong> today.<br>
+      Start your journey into a world of short films — right from your pocket.
+    </p>
 
-  <div class="download-btn">
-    <a href="https://github.com/CatReels/CatReels/releases/download/V1.0.1/catreels.apk">
-      <img src="images/logo_download.png" alt="Download" width="150" />
-    </a>
-  </div>
+    <div class="download-btn">
+      <a href="https://github.com/CatReels/CatReels/releases/download/V1.0.1/catreels.apk">
+        <img src="images/logo_download.png" alt="Download" width="150" />
+      </a>
+    </div>
   </div>
 
   <!-- Owl Carousel JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $("#screenshot-carousel").owlCarousel({
-        items: 1,
-        loop: true,
-        margin: 20,
-        autoplay: true,
-        autoplayTimeout: 2000,
-        autoplayHoverPause: true,
-        responsive:{
-          768:{ items:3 },
-          1200:{ items:4 }
-        }
-      });
-    });
-  </script>
   <script>
     $(document).ready(function(){
       $('#screenshot-carousel').owlCarousel({
@@ -202,6 +239,8 @@
         autoplay: true,
         autoplayTimeout: 2000,
         autoplayHoverPause: true,
+        autoHeight: true,
+        smartSpeed: 600,
         responsive:{
           768:{ items:3 },
           1200:{ items:4 }
@@ -215,6 +254,8 @@
         autoplay: true,
         autoplayTimeout: 2500,
         autoplayHoverPause: true,
+        autoHeight: true,
+        smartSpeed: 600,
         responsive:{
           768:{ items:3 },
           1200:{ items:3 }
