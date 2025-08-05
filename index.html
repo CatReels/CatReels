@@ -8,19 +8,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
   <style>
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 20px;
-      box-sizing: border-box;
-    }
-
     body {
       background-color: #111;
       color: #f0f0f0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
-      padding: 20px;
+      margin: 0;
     }
 
     img {
@@ -30,7 +23,7 @@
     }
 
     h2, h3 {
-      color: #d8267b;
+      color: #E73B4B;
       text-align: center;
       font-size: 25px;
     }
@@ -40,27 +33,11 @@
       margin: 0 0 5px;
     }
 
-    hr {
-      border: 1px solid #444;
-      margin: 40px 0;
-    }
-
-    .image-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .image-row.three img {
-      flex: 1 1 calc(33.33% - 12px);
-      max-width: calc(33.33% - 12px);
-    }
-
-    .download-btn img {
-      margin-top: 20px;
-      border: none;
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
     }
 
     .screenshot-wrap {
@@ -92,48 +69,216 @@
       flex-shrink: 0;
     }
 
+    .intro-section {
+      background: url('images/background.png') no-repeat center center;
+      background-size: cover;
+      padding: 80px 20px;
+      text-align: center;
+      color: #fff;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .intro-section h2 {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .intro-section p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .cta-button {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      padding: 16px 32px;
+      background: #E73B4B;
+;
+;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+
     @media (max-width: 768px) {
       .feature-box {
         flex: 1 1 100%;
       }
     }
+
+    /* HEADER MENU */
+    .header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      background: rgba(17, 17, 17, 0.8);
+      backdrop-filter: blur(5px);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    .logo {
+      color: #E73B4B;
+      font-size: 20px;
+      margin: 0;
+      flex-shrink: 0;
+    }
+
+    /* --- Updated Menu CSS --- */
+    .nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: #E73B4B;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links li a:hover {
+      color: #E73B4B;
+    }
+
+    .burger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        justify-content: flex-end;
+      }
+
+      .nav-links {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        flex-direction: column;
+        background-color: #111;
+        width: 200px;
+        padding: 20px;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .burger {
+        display: flex;
+      }
+    }
   </style>
 </head>
 <body>
-  <div style="display: flex; justify-content: space-between; align-items: center; max-width: 960px; margin: 0 auto 10px auto; padding: 0 20px;">
-    <h2 style="margin: 0; color: #d8267b;  font-size: 32px; font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;">CatReels</h2>
-    <div class="download-btn">
-      <a href="https://github.com/CatReels/CatReels/releases/download/V1.0.1/catreels.apk">
-        <img src="images/logo_download.png" alt="Download" width="110" />
-      </a>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container header-inner">
+      <h2 class="logo">CatReels</h2>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#features">Key Features</a></li>
+          <li><a href="#how-it-works">How CatReels Works</a></li>
+          <li><a href="#download">Download</a></li>
+        </ul>
+        <div class="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- INTRO Section -->
+  <div class="intro-section">
+    <h1><span class="highlight" style="color: #E73B4B; text-shadow: 0 2px 6px rgba(0,0,0,0.6);">CatReels</span> - Explore the Universe of Short Films & Unlimited Fun</h1>
+    <div style="margin: 20px 0;">
+      <a href="https://github.com/CatReels/CatReels/releases/download/V1.0.1/catreels.apk" class="cta-button">Download APK</a>
+    </div>
+    <p>Watch anytime, anywhere, with smooth FullHD streaming. All in one easy-to-use app.</p>
+    <div>
+      <img src="images/Banner.png" alt="banner" loading="lazy" style="width:100%; max-width: 600px; margin-top: 30px; border-radius: 12px;">
     </div>
   </div>
 
+  <!-- MAIN CONTENT -->
   <div class="container">
-
-    <p align="left">
-      <img src="images/Banner.png" alt="banner" width="100%">
-    </p>
-
-    <h2>Explore the Universe of Short Films, Unlimited Fun</h2>
-
-    <p>Let's get entertainment moments with <strong>CatReels</strong>.</p>
-
-    <p>Each episode only a few minutes — romantic sparks, revenge twists, or unexpected turns.</p>
-
-    <p>Watch anytime, anywhere, with smooth FullHD streaming. All in one easy-to-use app.</p>
-
-    <hr>
-
+    <h3 id="features">✨ Key Features</h3>
     <div class="screenshot-wrap" style="margin-bottom: 40px;">
       <div class="owl-carousel owl-theme" id="feature-carousel">
-        <div class="item"><img src="images/explore.png" alt="Explore" /></div>
-        <div class="item"><img src="images/view_screen.png" alt="View Screen" /></div>
-        <div class="item"><img src="images/list_movie.png" alt="List Movie" /></div>
+        <div class="item"><img src="images/explore.png" alt="Explore" loading="lazy"></div>
+        <div class="item"><img src="images/view_screen.png" alt="View Screen" loading="lazy"></div>
+        <div class="item"><img src="images/list_movie.png" alt="List Movie" loading="lazy"></div>
       </div>
     </div>
 
-    <h3>✨ Key Features</h3>
     <div class="feature-grid">
       <div class="feature-box">
         <div class="feature-icon">🎬</div>
@@ -165,9 +310,7 @@
       </div>
     </div>
 
-    <hr>
-
-    <h3>💡 How CatReels Works</h3>
+    <h3 id="how-it-works">💡 How CatReels Works</h3>
     <p>With <strong>CatReels</strong>, you decide how to enjoy:</p>
     <ul>
       <li>Watch for free</li>
@@ -175,15 +318,13 @@
       <li>Enjoy recommendations tailored just for you</li>
     </ul>
 
-    <hr>
-
     <div id="screenshot" class="section section-padding">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-3 col-xs-12">
             <div class="section-header text-center" style="text-align: center;">
               <h3 class="section-title">📸 Screenshot</h3>
-              <p class="section-sub" style="text-align: center;">A quick look at the app &amp; its features</p>
+              <p class="section-sub" style="text-align: center;">A quick look at the app & its features</p>
             </div>
           </div>
         </div>
@@ -192,11 +333,11 @@
             <div class="screen-mock"></div>
             <div class="screenshot-wrap">
               <div class="owl-carousel screenshot-carousel owl-theme" id="screenshot-carousel">
-                <div class="item"><img src="images/home.jpg" alt="Entertainment moments"></div>
-                <div class="item"><img src="images/list_collection.jpg" alt="Diverse film library"></div>
-                <div class="item"><img src="images/for_you.jpg" alt="Personalized experience"></div>
-                <div class="item"><img src="images/my_list.jpg" alt="My List"></div>
-                <div class="item"><img src="images/player.jpg" alt="Player Screen"></div>
+                <div class="item"><img src="images/home.jpg" alt="Entertainment moments" loading="lazy"></div>
+                <div class="item"><img src="images/list_collection.jpg" alt="Diverse film library" loading="lazy"></div>
+                <div class="item"><img src="images/for_you.jpg" alt="Personalized experience" loading="lazy"></div>
+                <div class="item"><img src="images/my_list.jpg" alt="My List" loading="lazy"></div>
+                <div class="item"><img src="images/player.jpg" alt="Player Screen" loading="lazy"></div>
               </div>
             </div>
           </div>
@@ -204,21 +345,19 @@
       </div>
     </div>
 
-    <hr>
-
-    <p>
+    <p id="download">
       Download <strong>CatReels</strong> today.<br>
       Start your journey into a world of short films — right from your pocket.
     </p>
 
     <div class="download-btn">
       <a href="https://github.com/CatReels/CatReels/releases/download/V1.0.1/catreels.apk">
-        <img src="images/logo_download.png" alt="Download" width="150" />
+        <img src="images/logo_download.png" alt="Download" width="150" loading="lazy">
       </a>
     </div>
   </div>
 
-  <!-- Owl Carousel JS -->
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script>
@@ -251,6 +390,19 @@
           768:{ items:3 },
           1200:{ items:3 }
         }
+      });
+
+      $('.burger').click(function(){
+        $('.nav-links').toggleClass('active');
+      });
+
+      $('.nav-links a').click(function(e){
+        e.preventDefault();
+        var target = $(this).attr('href');
+        $('html, body').animate({
+          scrollTop: $(target).offset().top - 60
+        }, 600);
+        $('.nav-links').removeClass('active');
       });
     });
   </script>
